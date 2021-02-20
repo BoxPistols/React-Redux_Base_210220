@@ -13,6 +13,8 @@ class App extends Component {
     );
   }
 }
+
+// ストアのコネクト : empty now
 App = connect()(App);
 
 export default App;

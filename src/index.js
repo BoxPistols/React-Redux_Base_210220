@@ -11,7 +11,7 @@ let state_value = {
   message: 'Counter',
 };
 
-// Reducer
+// Reducer Action Type
 function counter(state = state_value, action) {
   switch (action.type) {
     case 'INCREMENT':
