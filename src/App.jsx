@@ -1,6 +1,18 @@
-import React from "react";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Message } from './Message';
+import { Button } from './Button';
 
-export default function App() {
-  // render() {
-  return <p>App</p>;
+class App extends Component {
+  render() {
+    return (
+      <>
+        <Message />
+        <Button />
+      </>
+    );
+  }
 }
+App = connect()(App);
+
+export default App;

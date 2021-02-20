@@ -1,29 +1,28 @@
-// index.js
-import React from "react";
-import { render } from "react-dom";
-import { createStore } from "redux";
-import { Provider } from "react-redux";
-import {} from "./styles.css";
-import App from "./App";
+import React from 'react';
+import { render } from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import App from './App';
+import './styles.scss';
 
 // State
 let state_value = {
   counter: 0,
-  message: "Counter"
+  message: 'Counter',
 };
 
 // Reducer
 function counter(state = state_value, action) {
   switch (action.type) {
-    case "INCREMENT":
+    case 'INCREMENT':
       return {
         counter: state.counter + 1,
-        message: "INCREMENT"
+        message: 'INCREMENT',
       };
-    case "DECREMENT":
+    case 'DECREMENT':
       return {
         counter: state.counter - 1,
-        message: "DECREMENT"
+        message: 'DECREMENT',
       };
     default:
       return state;
@@ -42,4 +41,4 @@ const reactElement = (
   </div>
 );
 
-render(reactElement, document.getElementById("root"));
+render(reactElement, document.getElementById('root'));
